@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comapatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вебсайти нави донишҷӯён</title>
+    <!--CSS-link-->
+    <Link rel="stylesheet" href="home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+.logo img{
+    width: 200px;
+    height: 100px;
+    margin-top: 0;
+    margin-left: 0;
+}
+.ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.navmenu a:hover{
+    color: gray;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-icon i{
+    margin-right: 20px;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.nav-icon i:hover{
+    color: gray;
+}
+#menu-icon{
+    font-size: 35px;
+    color: black;
+    z-index: 10001;
+    cursor: pointer;
+}
+header.sticky{
+    background-color: white;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px black;
+}
+section{
+    padding: 5% 10%;
+}
+.introduction{
+    margin-top: 120px;
+    background-color: #6E6E6E;
+}
+.text-1 h5{
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+.text-1 h1{
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.text-1 p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.text-1 img{
+    float: right;
+}
+.alumni{
+    background-color: #DDD4CC;
+}
+.text h3{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.article{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+    gap: 1rem;
+}
+.news-article{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+    gap: 1rem;
+}
+.num-1 h5{
+    color: grey;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.num-1 h4{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    max-width: 380px;
+}
+.num-1 p{
+    color: grey;
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.num-1 h6{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+.resources{
+    background-color: #AFA193;
+}
+.text-2 h3{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text-2 p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.text-3 h3{
+    text-align: center;
+    color: rgba(169, 169, 169, 0.288);
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text-3 h6{
+    margin-right: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.text-3 h6 i:hover{
+    color: red;
+}
+.buddy h3{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.buddy h2{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.buddy p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.buddy-btn{
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 2px solid black;
+    padding: 12px 25px;
+    transition: all .42s ease ;
+    margin-left: 450px;
+}
+.buddy-btn:hover{
+    background-color: black;
+    color: white;
+}
+.buddy-btn i{
+    vertical-align: middle;
+}
+.contact{
+    background-color: #DDD4CC;
+}
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 3rem;
+}
+.social-icon{
+    display: flex;
+    align-items: center;
+}
+.social-icon i{
+    margin-right: 20px;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.social-icon i:hover{
+    color: green;
+    transform: scale(1.3)
+}
+.copyright-info p{
+    margin-left: 450px;
+}
+.pages-info h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.pages-info a{
+    margin-right: 20px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.pages-info a:hover{
+    color: green;
+    transform: scale(1.3)
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html" class="logo"><img src="Img/school logo.png" style="height: 75px; width: 75px;" alt=""></a>
+        <ul class="navmenu">
+            <li><a href="home2.html">Хона</a></li>
+            <li><a href="campus2.html">Кампус</a></li>
+            <li><a href="ibcurriculum2.html">Барномаи таълимии IB</a></li>
+            <li><a href="help2.html">Кӯмак</a></li>
+        </ul>
+
+        <div class="nav-icon">
+            <a href="language.html"><i class='bx bx-dots-vertical-rounded'></i></i></a>
+        </div>
+    </header>
+
+<section class="introduction">
+    <div class="text-1">
+        <h5>Барномаи таълимии IB</h5>
+        <h1>Шарҳ дод:</h1>
+        <p><a href="#" ><img src="Img/ib_logo-removebg-preview.png" alt=""></a>Хуш омадед ба ҷаҳони ҳаяҷонбахши барномаи таълимии байналмилалии бакалавриат (IB)! Тасаввур кунед: сафари академии шумо дар пеш аст
+            ба саёҳати чархболи ҷустуҷӯ, эҷодкорӣ ва кашф. Бо IB, омода мубтало ба ганҷинаи субъектҳои, аз
+            Математика ба мусиқӣ ва ҳама чизҳои байни онҳо. Гап на танхо дар бораи аз ёд кардани фактхо; он дар бораи озод кардани ботинии Шерлок Холмс аст
+            асрори ҷаҳонии воқеиро ҳал кунед, Пикассо ботини худро барои эҷоди шоҳасарҳо равона кунед ва Эйнштейни ботинии худро барои кушодани асрор оғӯш кунед
+            аз коинот. Пас, баста кунед, зеро IB на танҳо як барномаи таълимӣ аст - он шиноснома ба ҷаҳони саёҳатҳост, ки дар он омӯзиш ҳудуд надорад,
+            ва ҳар рӯз як имконияти фатҳ кардани уфуқҳои нав аст!</p>
+    </div>
+</section>
+
+<section class="alumni">
+<div class="text">
+    <h3>Ҳикояҳо ва маслиҳатҳои хатмкардагон</h3>
+    <p>Умедворам, ки инҳо шуморо камтар ташвиш медиҳанд. Мардуми зиёде аз пайроҳае, ки шумо меравед, тай карда, аз тарафи дигар баромаданд, пас чаро шумо наметавонед?</p>
+</div>
+<section class="news-article">
+    <div class="article">
+        <div class="num-1">
+            <a href="https://https://www.agakhanacademies.org/mombasa/gayathri-vinil-studying-astronomy-and-astrophysics-florida-institute-technology" class="1"><img src="Img/news 1.jpg" style="width: 300px; height: 200px; border-radius: 5px;" alt=""></a>
+            <h5>04 августи соли 2023</h5>
+            <h4>Гаятри Винил: омӯзиши астрономия ва астрофизика дар Донишкадаи технологии Флорида</h4>
+            <p>Гаятри Винил ба Донишкадаи Технологияи Флорида (Флорида Тех) барои таҳсил дар соҳаи астрономия ва</p>
+            <h6><a href="https://https://www.agakhanacademies.org/mombasa/gayathri-vinil-studying-astronomy-and-astrophysics-florida-institute-technology">Хонданро идома диҳед...</a></h6>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="num-1">
+            <a href="https://www.ef.com/wwen/blog/efacademyblog/mastering-ib-simple-tips/" class="1"><img src="Img/n2.webp" style="width: 300px; height: 200px; border-radius: 5px;" alt=""></a>
+            <h5>Санаи нест</h5>
+            <h4>Азхудкунии IB бо ин маслиҳатҳои оддӣ</h4>
+            <p>Якчанд форумҳои IB-ро дар интернет аз назар гузаронед ва шумо метавонед як хулосаи дақиқ ба даст оред: IB хеле муҳим аст</p>
+            <h6><a href="https://www.ef.com/wwen/blog/efacademyblog/mastering-ib-simple-tips/">Хонданро идома диҳед...</a></h6>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="num-1">
+            <a href="https://www.agakhanacademies.org/mombasa/spotlight/muskaan-bhaidani-class-2020-journey-university-and-academys-impact" class="1"><img src="Img/news 3.jpg" style="width: 300px; height: 200px; border-radius: 5px;" alt=""></a>
+            <h5>2020</h5>
+            <h4>Мускан Бхайдани (Синфи 2020): Сафар ба донишгоҳ ва таъсири Академия</h4>
+            <p>Мускан Бҳайдани як хатмкардаи Академияи Оғохон Момбаса мебошад, ки дар синфи 2020 буд. Бо баҳои таъсирбахш хатм мекунад</p>
+            <h6><a href="https://www.agakhanacademies.org/mombasa/spotlight/muskaan-bhaidani-class-2020-journey-university-and-academys-impact">Хонданро идома диҳед...</a></h6>
+        </div>
+    </div>
+</section>
+</section>
+
+<section class="resources">
+    <div class="text-2">
+        <h3>Захираҳо</h3>
+        <p>Дар зер танҳо баъзе вебсайтҳое ҳастанд, ки шумо ҳангоми омӯхтани барномаи таълимии мо муфид хоҳед ёфт.</p>
+    </div>
+    <div class="text-3">
+        <h2>Барномаҳои IB:</h2>
+        <h6><a href="https://www.ibo.org/programmes/primary-years-programme/">IB PYP</a></h6>
+        <h6><a href="https://www.ibo.org/programmes/middle-years-programme/">IB MYP</a></h6>
+        <h6><a href="https://www.ibo.org/programmes/diploma-programme/">IB DP</a></h6>
+        <h6><a href="https://www.ibo.org/programmes/career-related-programme/">Барномаи марбут ба касб дар IB</a></h6>
+    </div>
+    <div class="buddy">
+        <h3>Ҳанӯз ба кӯмак ниёз доред?</h3>
+        <h2>Барои барномаи дӯстони мо муроҷиат кунед!</h2>
+        <p>Барои дохил шудан ба шумо танҳо ин тугмаро пахш кардан лозим аст ва дар рӯзи аввали таҳсил ба шумо дӯсте таъин карда мешавад. Онҳо омӯзонида шудаанд, ки ба ҳама саволҳое, ки як донишҷӯи нав дода мешавад, ҷавоб диҳад
+            ва ба шумо тавассути барномаи таълимии мо ва инчунин ҳаёти ҳаррӯзаи академия кӯмак хоҳад кард.
+        </p>
+        <h3>Имрӯз сабти ном кунед</h3>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwEhLYVOrLXQH1-h0VJW95kjToC3M9SwsWSjw-UmH1sJubw/viewform?usp=sf_link" class="buddy-btn">Барномаи дӯстон</a>
+    </div>
+</section>
+<section class="contact">
+    <div class="LOGO">
+        <a href="#" ><img src="Img/school_logo-removebg-preview.png" style="margin-right: 300px; width: 150px; height: auto;" alt=""></a>
+        <a href="#" ><img src="Img/school_logo-removebg-preview.png" style="margin-right: 300px; width: 150px; height: auto;" alt=""></a>
+        <a href="#" ><img src="Img/school_logo-removebg-preview.png" style=" width: 150px; height: auto;" alt=""></a>
+    </div>
+    <br>
+    <div class="contacts">
+    <div class="social-icon">
+        <a href="https://facebook.com"><i class='bx bxl-facebook'></i></a>
+        <a href="https://instagram.com"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://tiktok.com"><i class='bx bxl-tiktok' ></i></a>
+        <a href="https://twitter.com"><i class='bx bxl-twitter' ></i></a>
+        <a href="https://youtube.com"><i class='bx bxl-youtube' ></i></a>
+        <a href="https://linkedin.com"><i class='bx bxl-linkedin' ></i></a>
+    </div>
+    <div class="contact-info">
+        <p>+254 (0) 720 631 144 / 735 931 144</p>
+        <p>П.О. Қуттии 90066-80100</p>
+        <p>Роҳи Мбуюни, Кизинго <br> Момбаса, КЕНИЯ</p>
+        <p>agakhanacademy.mombasa@gmail.com</p>
+    </div>
+    <div class="pages-info">
+        <h4>Support</h4>
+        <a href="home.html">Саҳифаи асосӣ</a>
+        <br>
+        <a href="campus.html">Саҳифаи кампус</a>
+        <br>
+        <a href="ibcurriculum.html">Дар бораи барномаи таълимии IB маълумот гиред</a>
+        <br>
+        <a href="help.html">Ба кӯмак ниёз доред?</a>
+    </div>
+    </div>
+</section>
+<div class="copyright-info">
+<p>Ҳуқуқи муаллифӣ © 1972-2024 Дар Aga Khan Academy Mombasa®</p>
+</div>
+    <script src="ibcurriculum2.js"></script>
+</body>
+</html>

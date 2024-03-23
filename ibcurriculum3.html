@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comapatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student Website</title>
+    <!--CSS-link-->
+    <Link rel="stylesheet" href="home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+.logo img{
+    width: 200px;
+    height: 100px;
+    margin-top: 0;
+    margin-left: 0;
+}
+.ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navmenu{
+    display: flex;
+}
+.navmenu a{
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+.navmenu a:hover{
+    color: gray;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+}
+.nav-icon i{
+    margin-right: 20px;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.nav-icon i:hover{
+    color: gray;
+}
+#menu-icon{
+    font-size: 35px;
+    color: black;
+    z-index: 10001;
+    cursor: pointer;
+}
+header.sticky{
+    background-color: white;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px black;
+}
+section{
+    padding: 5% 10%;
+}
+.introduction{
+    margin-top: 120px;
+    background-color: #6E6E6E;
+}
+.text-1 h5{
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+.text-1 h1{
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.text-1 p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.text-1 img{
+    float: right;
+}
+.alumni{
+    background-color: #DDD4CC;
+}
+.text h3{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.article{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+    gap: 1rem;
+}
+.news-article{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+    gap: 1rem;
+}
+.num-1 h5{
+    color: grey;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.num-1 h4{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    max-width: 380px;
+}
+.num-1 p{
+    color: grey;
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+.num-1 h6{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+.resources{
+    background-color: #AFA193;
+}
+.text-2 h3{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text-2 p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.text-3 h3{
+    text-align: center;
+    color: rgba(169, 169, 169, 0.288);
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text-3 h6{
+    margin-right: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.text-3 h6 i:hover{
+    color: red;
+}
+.buddy h3{
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.buddy h2{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.buddy p{
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+.buddy-btn{
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 2px solid black;
+    padding: 12px 25px;
+    transition: all .42s ease ;
+    margin-left: 450px;
+}
+.buddy-btn:hover{
+    background-color: black;
+    color: white;
+}
+.buddy-btn i{
+    vertical-align: middle;
+}
+.contact{
+    background-color: #DDD4CC;
+}
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 3rem;
+}
+.social-icon{
+    display: flex;
+    align-items: center;
+}
+.social-icon i{
+    margin-right: 20px;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.social-icon i:hover{
+    color: green;
+    transform: scale(1.3)
+}
+.copyright-info p{
+    margin-left: 450px;
+}
+.pages-info h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.pages-info a{
+    margin-right: 20px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .42 ease;
+}
+.pages-info a:hover{
+    color: green;
+    transform: scale(1.3)
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html" class="logo"><img src="Img/school logo.png" style="height: 75px; width: 75px;" alt=""></a>
+        <ul class="navmenu">
+            <li><a href="home3.html">Nyumbani</a></li>
+            <li><a href="campus3.html">Kampasi</a></li>
+            <li><a href="ibcurriculum3.html">Mtaala wa IB</a></li>
+            <li><a href="help3.html">Msaada</a></li>
+        </ul>
+
+        <div class="nav-icon">
+            <a href="language.html"><i class='bx bx-dots-vertical-rounded'></i></i></a>
+        </div>
+    </header>
+
+<section class="introduction">
+    <div class="text-1">
+        <h5>Mtaala wa IB</h5>
+        <h1>Imefafanuliwa:</h1>
+        <p><a href="#" ><img src="Img/ib_logo-removebg-preview.png" alt=""></a>Karibu katika ulimwengu unaosisimua wa mtaala wa Kimataifa wa Baccalaureate (IB)! Fikiria hili: safari yako ya kielimu inakaribia kubadilika
+            katika safari ya kuzunguka ya utafutaji, ubunifu na ugunduzi. Ukiwa na IB, jitayarishe kupiga mbizi kwenye hazina ya masomo, kutoka
+            Hisabati kwa Muziki, na kila kitu katikati. Sio tu juu ya kukariri ukweli; ni kuhusu kuzindua Sherlock Holmes wako wa ndani
+            suluhisha mafumbo ya ulimwengu halisi, ukielekeza Picasso yako ya ndani kuunda kazi bora, na kukumbatia Einstein wako wa ndani kufunua siri.
+            ya ulimwengu. Kwa hivyo, fungamana, kwa sababu IB sio tu mtaala—ni pasipoti ya ulimwengu wa matukio, ambapo kujifunza hakupi mipaka,
+            na kila siku ni nafasi ya kushinda upeo mpya!</p>
+    </div>
+</section>
+
+<section class="alumni">
+<div class="text">
+    <h3>Hadithi za Wahitimu na Vidokezo</h3>
+    <p>Tunatumahi kuwa haya yatakufanya uhisi wasiwasi mdogo. Watu wengi wametembea njia unayotembea na wametoka upande mwingine, kwa nini usiweze?</p>
+</div>
+<section class="news-article">
+    <div class="article">
+        <div class="num-1">
+            <a href="https://https://www.agakhanacademies.org/mombasa/gayathri-vinil-studying-astronomy-and-astrophysics-florida-institute-technology" class="1"><img src="Img/news 1.jpg" style="width: 300px; height: 200px; border-radius: 5px;" alt=""></a>
+            <h5>04 Agosti, 2023</h5>
+            <h4>Gayathri Vinil: anasoma elimu ya nyota na unajimu katika Taasisi ya Teknolojia ya Florida</h4>
+            <p>Gayathri Vinil atahudhuria Taasisi ya Teknolojia ya Florida (Florida Tech) kufuata taaluma kuu ya unajimu na</p>
+            <h6><a href="https://https://www.agakhanacademies.org/mombasa/gayathri-vinil-studying-astronomy-and-astrophysics-florida-institute-technology">Endelea kusoma...</a></h6>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="num-1">
+            <a href="https://www.ef.com/wwen/blog/efacademyblog/mastering-ib-simple-tips/" class="1"><img src="Img/n2.webp" style="width: 300px; height: 200px; border-radius: 5px;" alt=""></a>
+            <h5>Hakuna Tarehe</h5>
+            <h4>Kujua IB kwa vidokezo hivi rahisi</h4>
+            <p>Pitia mabaraza mengi ya IB mkondoni na unaweza kupata hitimisho moja dhahiri: IB ni ya kupindukia</p>
+            <h6><a href="https://www.ef.com/wwen/blog/efacademyblog/mastering-ib-simple-tips/">Endelea kusoma...</a></h6>
+        </div>
+    </div>
+
+    <div class="article">
+        <div class="num-1">
+            <a href="https://www.agakhanacademies.org/mombasa/spotlight/muskaan-bhaidani-class-2020-journey-university-and-academys-impact" class="1"><img src="Img/news 3.jpg" style="width: 300px; height: 200px; border-radius: 5px;" alt=""></a>
+            <h5>2020</h5>
+            <h4>Muskaan Bhaidani (Darasa la 2020): Safari ya kwenda chuo kikuu na athari za Chuo</h4>
+            <p>Muskaan Bhaidani ni mhitimu wa Chuo cha Aga Khan Mombasa ambaye alikuwa katika Darasa la 2020. Alihitimu kwa kiwango cha kuvutia.</p>
+            <h6><a href="https://www.agakhanacademies.org/mombasa/spotlight/muskaan-bhaidani-class-2020-journey-university-and-academys-impact">Endelea kusoma...</a></h6>
+        </div>
+    </div>
+</section>
+</section>
+
+<section class="resources">
+    <div class="text-2">
+        <h3>Rasilimali</h3>
+        <p>Zifuatazo ni baadhi tu ya tovuti ambazo unaweza kupata zitakusaidia unapojifunza kuhusu mtaala wetu.</p>
+    </div>
+    <div class="text-3">
+        <h2>Programu za IB:</h2>
+        <h6><a href="https://www.ibo.org/programmes/primary-years-programme/">IB PYP</a></h6>
+        <h6><a href="https://www.ibo.org/programmes/middle-years-programme/">IB MYP</a></h6>
+        <h6><a href="https://www.ibo.org/programmes/diploma-programme/">IB DP</a></h6>
+        <h6><a href="https://www.ibo.org/programmes/career-related-programme/">Mpango wa IB unaohusiana na Kazi</a></h6>
+    </div>
+    <div class="buddy">
+        <h3>Bado unahitaji msaada?</h3>
+        <h2>Tuma ombi la programu yetu ya marafiki!</h2>
+        <p>Ni rahisi unachohitaji kufanya ni kubonyeza kitufe hiki ili kujiandikisha na utapangiwa rafiki siku yako ya kwanza shuleni. Wamefunzwa kujibu maswali yote ambayo mtu anaweza kuuliza kama mwanafunzi mpya
+            na itakusaidia kupitia mtaala wetu na pia maisha ya kila siku katika chuo hicho.
+        </p>
+        <h3>Jisajili leo</h3>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIwEhLYVOrLXQH1-h0VJW95kjToC3M9SwsWSjw-UmH1sJubw/viewform?usp=sf_link" class="buddy-btn">Mpango wa Buddy</a>
+    </div>
+</section>
+<section class="contact">
+    <div class="LOGO">
+        <a href="#" ><img src="Img/school_logo-removebg-preview.png" style="margin-right: 300px; width: 150px; height: auto;" alt=""></a>
+        <a href="#" ><img src="Img/school_logo-removebg-preview.png" style="margin-right: 300px; width: 150px; height: auto;" alt=""></a>
+        <a href="#" ><img src="Img/school_logo-removebg-preview.png" style=" width: 150px; height: auto;" alt=""></a>
+    </div>
+    <br>
+    <div class="contacts">
+    <div class="social-icon">
+        <a href="https://facebook.com"><i class='bx bxl-facebook'></i></a>
+        <a href="https://instagram.com"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://tiktok.com"><i class='bx bxl-tiktok' ></i></a>
+        <a href="https://twitter.com"><i class='bx bxl-twitter' ></i></a>
+        <a href="https://youtube.com"><i class='bx bxl-youtube' ></i></a>
+        <a href="https://linkedin.com"><i class='bx bxl-linkedin' ></i></a>
+    </div>
+    <div class="contact-info">
+        <p>+254 (0) 720 631 144 / 735 931 144</p>
+        <p>P.O. Sanduku 90066-80100</p>
+        <p>Barabara ya Mbuyuni, Kizingo <br> Mombasa, KENYA</p>
+        <p>agakhanacademy.mombasa@gmail.com</p>
+    </div>
+    <div class="pages-info">
+        <h4>Msaada</h4>
+        <a href="home.html">Ukurasa wa Nyumbani</a>
+        <br>
+        <a href="campus.html">Ukurasa wa Kampasi</a>
+        <br>
+        <a href="ibcurriculum.html">Jifunze kuhusu Mtaala wa IB</a>
+        <br>
+        <a href="help.html">Je, unahitaji Msaada?</a>
+    </div>
+    </div>
+</section>
+<div class="copyright-info">
+<p>Hakimiliki © 1972-2024 The Aga Khan Academy Mombasa®</p>
+</div>
+    <script src="ibcurriculum3.js"></script>
+</body>
+</html>
